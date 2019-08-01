@@ -3,11 +3,11 @@ require "yaml"
 def load_library(file_path)
   emoticons = YAML.load_file(file_path)
   
-  myHash = { 'get_meaning' => {}, 'get_emoticon' => {} }
+  myHash = { 'meaning' => {}, 'emoticon' => {} }
   
   emoticons.each do |key, value|
-    myHash['get_emoticon'][value[0]] = emoticons[key][1]
-    
+    myHash['emoticon'][value[0]] = emoticons[key][1]
+    myHash['meaning']
 end
 
 def get_japanese_emoticon
