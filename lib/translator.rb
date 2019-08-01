@@ -16,13 +16,13 @@ def load_library(file_path)
   myHash
 end
 
-def get_japanese_emoticon(file_path, emoticons)
+def get_japanese_emoticon(file_path, emoticon)
   result load_library(file_path)['emoticon'][emoticon]
   result ? result : "Results not Found"
   
 end
 
-def get_english_meaning(file_path, meaning)
-  result load_library(file_path)['meaning'][meaning]
+def get_english_meaning(file_path, emoticon)
+  result load_library(file_path)['meaning'][emoticon]
   result ? result : "Results not Found"
 end
