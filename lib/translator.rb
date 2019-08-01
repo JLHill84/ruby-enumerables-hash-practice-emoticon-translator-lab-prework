@@ -18,10 +18,11 @@ end
 
 def get_japanese_emoticon(file_path, emoticons)
   result load_library(file_path)['emoticon'][emoticon]
-  result ? result : "Sorry, "
+  result ? result : "Results not Found"
   
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(file_path, meaning)
+  result load_library(file_path)['meaning'][meaning]
+  result ? result : "Results not Found"
 end
